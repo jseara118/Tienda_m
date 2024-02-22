@@ -1,0 +1,103 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: bisque;
+}
+
+.encabezado{
+    position: fixed;
+     background-color: #076AF0;
+     top: 0;
+     left: 0;
+     height: 100px;
+     width: 100%;
+    
+}
+
+.navegacion {
+    display:flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+    
+    
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 100px;
+}
+
+.nav-menu{
+    display:flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 100px;
+}
+
+
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.nav-menu-link:hover{
+    background-color: #024070;
+    animation-delay: 0.5s;
+}
+
+
+aside{
+    position: fixed;
+     background-color: aqua;
+     color: black;
+     top: 100px;
+     left: 0;
+     bottom: 20px;
+     width: 20%;
+    
+}
+
+section{
+    position: fixed;
+    overflow-y: scroll;
+     background-color: whitesmoke;
+     color: black;
+     top: 100px;
+     left: 20%;
+     bottom: 20px;
+     width: 80%;
+    
+}
+
+footer{
+    position: fixed;
+     background-color: black;
+     color: white;
+     left: 0;
+     bottom: 0;
+     height: 20px;
+     width: 100%;
+    
+}
+
+tbody tr:nth-child(odd) {
+    background-color: aquamarine;
+    color: black; 
+}
+
+ tbody tr:nth-child(even) {
+    background-color: aquamarine;
+    color: black; 
+}
