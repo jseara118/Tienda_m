@@ -1,6 +1,4 @@
-
 package com.tienda_m.service.impl;
-
 
 import com.tienda_m.dao.CategoriaDao;
 import com.tienda_m.domain.Categoria;
@@ -9,7 +7,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 
 
 @Service
@@ -33,17 +30,17 @@ public class CategoriaServiceImpl implements CategoriaService{
     @Override
     @Transactional(readOnly = true)
     public Categoria getCategoria(Categoria categoria) {
-        return  categoriaDao.findById(categoria.getIdCategoria()).orElse(null);
+        return categoriaDao.findById(categoria.getIdCategoria()).orElse(null);
     }
 
-    @Override
     @Transactional
+    @Override
     public void save(Categoria categoria) {
         categoriaDao.save(categoria);
     }
 
-    @Override
     @Transactional
+    @Override
     public void delete(Categoria categoria) {
         categoriaDao.delete(categoria);
     }

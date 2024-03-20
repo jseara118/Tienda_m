@@ -1,6 +1,4 @@
-
 package com.tienda_m.service.impl;
-
 
 import com.tienda_m.dao.ProductoDao;
 import com.tienda_m.domain.Producto;
@@ -9,8 +7,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-
 
 @Service
 public class ProductoServiceImpl implements ProductoService {

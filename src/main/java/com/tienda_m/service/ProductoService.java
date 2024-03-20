@@ -1,8 +1,8 @@
-
 package com.tienda_m.service;
 
 import com.tienda_m.domain.Producto;
-import java.util.List; 
+import java.util.List;
+
 
 public interface ProductoService {
 

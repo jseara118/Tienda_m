@@ -1,7 +1,7 @@
 package com.tienda_m.service;
 
-
 import org.springframework.web.multipart.MultipartFile;
+
 
 public interface FirebaseStorageService {
 
@@ -19,3 +19,5 @@ public interface FirebaseStorageService {
     //El nombre del archivo Json
     final String archivoJsonFile = "techshop-61d94-firebase-adminsdk-d39gj-589f5b7bb3.json";
 }
+
+

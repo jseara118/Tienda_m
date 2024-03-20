@@ -19,19 +19,19 @@ public class CategoriaController {
     
     @Autowired
     private CategoriaService categoriaService;
-    
+
     // "/categoria/listado"
     @GetMapping("/listado")
     public String listado(Model model) {
         var lista = categoriaService.getCategorias(false);
         model.addAttribute("categorias", lista);
         model.addAttribute("totalCategorias", lista.size());
-
-        return "/categoria/listado";
+        
+        return "categoria/listado";
     }
     
     @Autowired
-     private FirebaseStorageServiceImpl firebaseStorageServiceImpl;
+    private FirebaseStorageServiceImpl firebaseStorageServiceImpl;
     
     @PostMapping("/guardar")
     public String guardar(Categoria categoria,
@@ -41,6 +41,7 @@ public class CategoriaController {
             categoriaService.save(categoria);
             String rutaImagen = firebaseStorageServiceImpl.cargaImagen(imagenFile, "categoria", categoria.getIdCategoria());
             categoria.setRutaImagen(rutaImagen);
+            
         }
         categoriaService.save(categoria);
         return "redirect:/categoria/listado";
@@ -54,9 +55,9 @@ public class CategoriaController {
     }
     
     @GetMapping("/eliminar/{idCategoria}")
-    public String elimina(Categoria categoria, Model model) {
-       categoriaService.delete(categoria);
-        return "/categoria/modifica";
+    public String eliminar(Categoria categoria) {
+        categoriaService.delete(categoria);
+        return "redirect:/categoria/listado";
     }
     
 }
