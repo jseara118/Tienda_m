@@ -28,4 +28,7 @@ public interface ProductoService {
     
     // esta consulta utiliza consultas JPQL
     public List<Producto> metodoSQL(double precioInf, double precioSup);
+    
+    public List<Producto> findByDescripcion(String descripcion);
+
 }

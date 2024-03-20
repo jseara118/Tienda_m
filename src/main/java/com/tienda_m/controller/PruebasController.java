@@ -4,6 +4,7 @@ import com.tienda_m.domain.Categoria;
 import com.tienda_m.service.CategoriaService;
 import com.tienda_m.service.ProductoService;
 import com.tienda_m.service.impl.FirebaseStorageServiceImpl;
+import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -94,4 +95,13 @@ public class PruebasController {
         return "/pruebas/listado2";
     }
 
+    @PostMapping("/query4")
+    public String consultaQuery4(@RequestParam(value = "descripcion") String descripcion, Model model) {
+        
+        var productos = productoService.findByDescripcion(descripcion);
+        model.addAttribute("totalProductos", productos.size());
+        model.addAttribute("productos", productos);
+        model.addAttribute("descripcion", descripcion);
+        return "/pruebas/listado2";
+    }
 }

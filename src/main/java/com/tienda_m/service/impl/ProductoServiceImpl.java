@@ -3,6 +3,7 @@ package com.tienda_m.service.impl;
 import com.tienda_m.dao.ProductoDao;
 import com.tienda_m.domain.Producto;
 import com.tienda_m.service.ProductoService;
+import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -65,5 +66,13 @@ public class ProductoServiceImpl implements ProductoService {
     public List<Producto> metodoSQL(double precioInf, double precioSup) {
         return productoDao.metodoSQL(precioInf, precioSup);
     }
-
+    
+    @Override
+    public List<Producto> findByDescripcion(String descripcion) {
+        return productoDao.findByDescripcion(descripcion);
+    
 }
+    
+}
+
+
