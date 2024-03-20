@@ -6,12 +6,13 @@
     <head th:fragment="head">
         <title>TechShop</title>
         <meta charset="UTF-8"/>
+        <script th:src="@{/js/rutinas.js}"></script>
         <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet" href="url"/>
         <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet" href="url"/>
         <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
         <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
         <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-        <script th:src="@{/js/rutinas.js}"></script>
+
 
     </head>
     <body>
@@ -63,13 +64,10 @@
             </section>
         </header>
 
-        <footer th:fragment="footer" class="bg-info text-while mt-5 p-2">
-            <div class="container">
-                <div class="col">
-                    <p>&COPY; [[#{plantilla.derechos}]]</p>
-                </div>
-            </div>   
-          
+        <footer th:fragment="footer" class="bg-info text-white mt-5 p-2">
+            <div class="col">
+                <p>&COPY; [[#{plantilla.derechos}]]</p>
+            </div>
         </footer>
 
     </body>

@@ -1,4 +1,4 @@
-package com.tienda_m.serviceimpl;
+package com.tienda_m.service.impl;
 
 import com.google.auth.Credentials;
 import com.google.auth.ServiceAccountSigner;

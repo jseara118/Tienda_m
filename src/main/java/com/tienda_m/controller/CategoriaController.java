@@ -2,7 +2,7 @@ package com.tienda_m.controller;
 
 import com.tienda_m.domain.Categoria;
 import com.tienda_m.service.CategoriaService;
-import com.tienda_m.serviceimpl.FirebaseStorageServiceImpl;
+import com.tienda_m.service.impl.FirebaseStorageServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,5 +1,5 @@
 
-package com.tienda_m.serviceimpl;
+package com.tienda_m.service.impl;
 
 
 import com.tienda_m.dao.CategoriaDao;

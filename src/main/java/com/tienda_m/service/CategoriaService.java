@@ -10,17 +10,13 @@ public interface CategoriaService {
     public List<Categoria> getCategorias(boolean activo);
     
     
+    // se recupera un registro tomando el idCategoria como clave de busqueda
+    public Categoria getCategoria(Categoria categoria);
     
-    //se recupera un registro tomando el idCategoria como clave de busqueda
+    // si idCategoria tiene un valor, se modifica ese registro,
+    // si idCategoria NO tiene valor, se inserta un nuevo registro
+    public void save(Categoria categoria);
     
-    public Categoria getCategoria( Categoria categoria);
-    
-    //Si idCategoria tiene un valor, se modifica ese regisgro,
-    //Si idCategoria NO tiene valor, se inserta un nuevo registro
-    
-    public void save (Categoria categoriia);
-    
-    //Se elimina el registro que tenga el valor del IdCategoria pasado
-    
-    public void delete (Categoria categoria);
+    // se elimina ek registgro que tenga el valor del idCategoria pasado
+    public void delete(Categoria categoria);
 }

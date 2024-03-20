@@ -10,17 +10,22 @@ public interface ProductoService {
     public List<Producto> getProductos(boolean activo);
     
     
+    // se recupera un registro tomando el idProducto como clave de busqueda
+    public Producto getProducto(Producto producto);
     
-    //se recupera un registro tomando el idProducto como clave de busqueda
+    // si idProducto tiene un valor, se modifica ese registro,
+    // si idProducto NO tiene valor, se inserta un nuevo registro
+    public void save(Producto producto);
     
-    public Producto getProducto( Producto producto);
+    // se elimina ek registgro que tenga el valor del idProducto pasado
+    public void delete(Producto producto);
     
-    //Si idProducto tiene un valor, se modifica ese regisgro,
-    //Si idProducto NO tiene valor, se inserta un nuevo registro
+    // esta consulta utiliza consultas ampliadas query
+    public List<Producto> metodoJPA(double precioInf, double precioSup);
     
-    public void save (Producto categoriia);
+    // esta consulta utiliza consultas JPQL
+    public List<Producto> metodoJPQL(double precioInf, double precioSup);
     
-    //Se elimina el registro que tenga el valor del IdProducto pasado
-    
-    public void delete (Producto producto);
+    // esta consulta utiliza consultas JPQL
+    public List<Producto> metodoSQL(double precioInf, double precioSup);
 }
