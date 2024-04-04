@@ -6,7 +6,7 @@ body {
 
 .encabezado{
     position: fixed;
-     background-color: #076AF0;
+     background-color: #000000;
      top: 0;
      left: 0;
      height: 100px;
@@ -53,7 +53,7 @@ body {
 }
 
 .nav-menu-link:hover{
-    background-color: #024070;
+    background-color: #000000;;
     animation-delay: 0.5s;
 }
 

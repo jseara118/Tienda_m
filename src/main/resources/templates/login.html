@@ -9,13 +9,15 @@
 
     </head>
     <body>
-
+        
         <header th:replace="~{layout/plantilla :: header}"/>
         
-        <section th:replace="~{categoria/fragmentos :: botonesAgregar}"/>
-        <section th:replace="~{categoria/fragmentos :: listadoCategorias}"/>
-        <section th:replace="~{categoria/fragmentos :: agregarCategoria}"/>
-
+        <form method="post" th:action="@{/login}">
+            <input type="text" name="username"/><br/>
+            <input type="password" name="password"/>   
+            <input type="submit" value="Login"/>
+        </form>
+        
         <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>
 </html>
